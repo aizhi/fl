@@ -54,7 +54,7 @@ public class Utility {
     public static boolean handleCountiesResponse(FLDB fldb, String response, int cityId) {
         if (!TextUtils.isEmpty(response)) {
             String[] allCounties = response.split(",");
-            if(allCounties != new && allCounties.length > 0) {
+            if(allCounties != null && allCounties.length > 0) {
                 for (String c : allCounties) {
                     String[] array = c.split("\\|");
                     County county = new County();
